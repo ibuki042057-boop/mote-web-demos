@@ -1,40 +1,158 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>梨木工業有限会社｜ご提案用デモ</title><style>
-:root{--ink:#262626;--paper:#ffffff;--panel:#f5f5f5;--line:#d6d6d6;--muted:#595959}
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>梨木工業有限会社｜屋根・外壁・割付おまかせテープ｜ご提案用デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a2a3a;--paper:#f4f7fa;--panel:#e2eaf2;--line:#c2d0de;--muted:#546a80;--accent:#2c5a8c;--dark:#0f1a26}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.85;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.9;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
+img{display:block;max-width:100%}
 a{color:inherit}
-.notice{background:var(--panel);padding:10px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:32px 0 24px;border-bottom:1px solid var(--line)}
-header .name{font-size:22px;font-weight:700;letter-spacing:.02em}
-header .sub{font-size:13px;color:var(--muted);margin-top:8px}
-main{padding:8px 0 24px}
-section{padding:28px 0;border-bottom:1px solid var(--line)}
-section:last-of-type{border-bottom:0}
-h2{font-size:19px;font-weight:700;line-height:1.5;margin:0 0 14px}
-h3{font-size:16px;font-weight:700;margin:0 0 6px}
-p{margin:0 0 14px;font-size:16px}
-.muted{color:var(--muted);font-size:13px}
-ul{margin:0 0 14px;padding-left:1.2em}
-li{margin:4px 0;font-size:16px}
+.notice{background:var(--dark);color:#a8bace;padding:9px 20px;font-size:12.5px;text-align:center;letter-spacing:.04em}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(244,247,250,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar .shop{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;letter-spacing:.08em}
+.topbar .tel{font-size:14px;text-decoration:none;border:1px solid var(--ink);padding:5px 14px;border-radius:999px;white-space:nowrap}
+.hero{position:relative;background:var(--dark);min-height:88svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,22,.78) 0%,rgba(8,14,22,.30) 45%,rgba(8,14,22,.15) 100%)}
+.hero-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:56px 24px 64px;width:100%}
+.hero .en{letter-spacing:.42em;font-size:12px;font-weight:500;margin:0 0 18px;text-transform:uppercase}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(34px,6.5vw,62px);font-weight:900;line-height:1.25;margin:0 0 16px;letter-spacing:.04em}
+.hero .lead{font-size:clamp(15px,2.4vw,18px);max-width:34em;margin:0;line-height:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.en-label{letter-spacing:.38em;font-size:11.5px;color:var(--accent);font-weight:700;text-transform:uppercase;margin:0 0 14px}
+h2{font-family:"Noto Serif JP",serif;font-size:clamp(26px,4.4vw,38px);font-weight:700;line-height:1.5;margin:0 0 22px;letter-spacing:.03em}
+.lead-p{font-size:16.5px;max-width:40em;margin:0 0 18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/3}
+.band{background:var(--panel)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.feature{border-top:2px solid var(--ink);padding-top:18px;transition:transform .3s ease}
+.feature:hover{transform:translateY(-3px)}
+.feature .fen{letter-spacing:.3em;font-size:11px;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+.feature h3{font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 8px}
+.feature p{font-size:14.5px;margin:0;color:#3a4e62}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.service{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 18px;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+.service:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(26,42,58,.10)}
+.service .sen{letter-spacing:.26em;font-size:10.5px;color:var(--muted);text-transform:uppercase;margin:0 0 6px}
+.service h3{font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 6px}
+.service p{font-size:13px;margin:0;color:#3a4e62}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
 .dl{margin:0}
-.dl div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-.dl div:last-child{border-bottom:0}
-.dl dt{flex:0 0 7.5em;color:var(--muted);margin:0}
+.dl div{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.dl dt{flex:0 0 6.5em;color:var(--muted);margin:0}
 .dl dd{margin:0}
-.notes{list-style:none;padding:0;margin:0}
-.notes li{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 14px;margin:0 0 10px}
-footer{padding:24px 0 48px;font-size:13px;color:var(--muted);line-height:1.8}
-a:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-@media(max-width:600px){.dl div{display:block}.dl dt{margin-bottom:2px}}
-
-h1.name{margin:0;line-height:1.5}body{overflow-wrap:anywhere}footer p{font-size:13px;margin:0 0 6px}
+.big-tel{font-family:"Noto Serif JP",serif;font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:.04em;margin:6px 0 4px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 30px;font-size:15px;text-decoration:none;border-radius:999px;margin-top:14px;letter-spacing:.06em;transition:opacity .3s ease}
+.btn:hover{opacity:.8}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+footer{background:var(--dark);color:#94a8bc;padding:44px 0 56px;font-size:13px;line-height:1.9}
+footer .wrap p{margin:0 0 6px}
+footer .fname{font-family:"Noto Serif JP",serif;color:#ccdbe8;font-size:16px;letter-spacing:.08em;margin-bottom:12px}
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:760px){
+ .split,.info-grid{grid-template-columns:1fr}
+ .features,.services{grid-template-columns:1fr}
+ section{padding:60px 0}
+ .hero{min-height:76svh}
+}
 </style></head>
-<body><div class="wrap"><header><h1 class="name">梨木工業有限会社</h1></header>
-<main><section><h2>屋根・外壁の板金工事</h2><p>屋根と外壁の板金工事を手がけています。</p></section>
-<section><h2>割付おまかせテープ</h2><p>「割付おまかせテープ」を製造・販売しています。</p></section>
-<section><h2>1967年設立</h2><p>1967年に設立した会社です。</p></section>
-<section><h2>所在地</h2><p>苫小牧市元中野町3-9-7</p></section></main>
-<footer><p>ご提案用のデモページです</p><p>制作：Mote。公式サイト・受付窓口ではありません。</p><p>企業紹介資料（tbsn9.pdf）等の公開情報に基づく構成です。最新の営業状況・サービス内容は事業者の公式案内をご確認ください。</p></footer>
-</div></body></html>
+<body>
+<div class="notice">Moteによる非公式の提案デモです。公式サイトではありません。工事のご相談・お問い合わせは会社へ直接ご連絡ください。</div>
+<div class="topbar"><div class="topbar-in"><span class="shop">梨木工業</span><a class="tel" href="tel:0144337027">お問い合わせ 0144-33-7027</a></div></div>
+
+<div class="hero">
+<img class="bg" src="img/hero.jpg" alt="屋根の上で作業する板金職人のシルエット">
+<div class="hero-in">
+<p class="en">Nashiki Kogyo — Since 1967</p>
+<h1>梨木工業</h1>
+<p class="lead">1967年創業。苫小牧で半世紀以上、屋根と外壁を守り続ける板金工事の会社です。自社開発の「割付おまかせテープ」は全国の現場で使われています。</p>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">Works</p>
+<h2 class="fade-in">屋根と外壁を、<br>確かな技術で守る。</h2>
+<div class="split">
+<div class="fade-in">
+<p class="lead-p">梨木工業は、1967年に「梨木板金」として創業し、1996年に法人化。屋根工事・外壁工事を中心に、ステンレス加工、リフォーム、塗装まで、住宅・建築物の外装を幅広く手がけています。</p>
+<p class="lead-p">建築板金の全国競技大会で優勝した実績を持ち、建築施工管理技士・金属屋根工事技士・ものづくりマイスターなどの有資格者が在籍しています。</p>
+</div>
+<img class="fade-in" src="img/a.jpg" alt="金属屋根の板金加工の作業風景">
+</div>
+<div class="features">
+<div class="feature fade-in"><p class="fen">Roofing</p><h3>屋根工事</h3><p>金属屋根の新設・葺き替え・補修。全国建築板金競技大会で優勝した技術力で施工します。</p></div>
+<div class="feature fade-in"><p class="fen">Exterior</p><h3>外壁工事・リフォーム</h3><p>外壁の張り替え・塗装・コーキング・サッシなど、住宅の外装全般に対応します。</p></div>
+<div class="feature fade-in"><p class="fen">Product</p><h3>割付おまかせテープ</h3><p>自社開発・特許取得の等間隔印字テープ。全国の屋根・外壁工事の現場で使われています。</p></div>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
+<p class="en-label fade-in">Tape</p>
+<h2 class="fade-in">割付おまかせテープ</h2>
+<div class="split">
+<img class="fade-in" src="img/b.jpg" alt="割付おまかせテープの使い方イラスト">
+<div class="fade-in">
+<p class="lead-p">「割付おまかせテープ」は、屋根・壁材の割り付け作業に使う等間隔印字テープです。建材の働き寸法に合わせた間隔が印字されており、現場での計測の手間を省き、貼り直しを減らします。</p>
+<p class="lead-p">印字間隔はオーダー生産。2009年に全国販売を開始し、2021年には出荷累計10万本を突破しました。特許取得済み・登録商標の自社オリジナル製品です。</p>
+<p><a class="btn ghost" href="https://www.waritsuke.net/shopping.php">テープの詳細・ご注文</a></p>
+</div>
+</div>
+<div class="services">
+<div class="service fade-in"><p class="sen">Patent</p><h3>特許取得</h3><p>特許第4577777号・第7205901号</p></div>
+<div class="service fade-in"><p class="sen">Order</p><h3>オーダー生産</h3><p>印字間隔を指定できる受注生産</p></div>
+<div class="service fade-in"><p class="sen">Nationwide</p><h3>全国販売</h3><p>2009年より全国の現場へ出荷</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">Information</p>
+<h2 class="fade-in">会社情報・お問い合わせ</h2>
+<div class="info-grid">
+<dl class="dl fade-in">
+<div><dt>社名</dt><dd>梨木工業有限会社</dd></div>
+<div><dt>本社</dt><dd>〒053-0005 北海道苫小牧市元中野町3-9-7</dd></div>
+<div><dt>工場</dt><dd>〒053-0052 北海道苫小牧市新開町3-17-1</dd></div>
+<div><dt>創業</dt><dd>1967年（昭和42年）5月</dd></div>
+<div><dt>事業内容</dt><dd>屋根・外壁工事、ステンレス加工、リフォーム、割付おまかせテープ製造販売</dd></div>
+<div><dt>FAX</dt><dd>0144-33-3291</dd></div>
+</dl>
+<div class="fade-in">
+<p class="en-label" style="margin-bottom:6px">Contact</p>
+<p style="margin:0;font-size:14.5px">工事のご相談・テープのご注文はお電話で</p>
+<p class="big-tel">0144-33-7027</p>
+<p style="margin:0;font-size:13.5px;color:var(--muted)">最新の情報は公式サイトをご確認ください。</p>
+<a class="btn" href="https://www.waritsuke.net/">公式サイトを見る</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<p class="fname">梨木工業有限会社｜ご提案用デモ</p>
+<p>制作：Mote。本ページは提案用のデモで、公式サイト・受付窓口ではありません。</p>
+<p>写真・イラストはイメージです（実際の店舗・商品の写真ではありません）。会社情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var els=document.querySelectorAll('.fade-in');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(e){io.observe(e)});
+});
+</script>
+</body></html>
