@@ -6,9 +6,10 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-ap
 a{color:inherit}
 .notice{background:var(--panel);padding:10px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:32px 0 24px;border-bottom:1px solid var(--line)}
-header .name{font-size:22px;font-weight:700;letter-spacing:.02em}
-header .sub{font-size:13px;color:var(--muted);margin-top:8px}
+header{padding:36px 0 28px;border-bottom:1px solid var(--line)}
+header .name{font-size:24px;font-weight:700;letter-spacing:.02em;margin:0;line-height:1.5}
+header .sub{font-size:14px;color:var(--muted);margin-top:8px}
+header .lead{font-size:16px;margin:18px 0 0}
 main{padding:8px 0 24px}
 section{padding:28px 0;border-bottom:1px solid var(--line)}
 section:last-of-type{border-bottom:0}
@@ -23,17 +24,70 @@ li{margin:4px 0;font-size:16px}
 .dl div:last-child{border-bottom:0}
 .dl dt{flex:0 0 7.5em;color:var(--muted);margin:0}
 .dl dd{margin:0}
+.btn{display:inline-block;border:1px solid var(--ink);padding:10px 22px;font-size:15px;text-decoration:none;margin-top:4px}
 .notes{list-style:none;padding:0;margin:0}
 .notes li{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 14px;margin:0 0 10px}
 footer{padding:24px 0 48px;font-size:13px;color:var(--muted);line-height:1.8}
-a:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+footer p{font-size:13px;margin:0 0 6px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 @media(max-width:600px){.dl div{display:block}.dl dt{margin-bottom:2px}}
-
-h1.name{margin:0;line-height:1.5}body{overflow-wrap:anywhere}footer p{font-size:13px;margin:0 0 6px}
+body{overflow-wrap:anywhere}
 </style></head>
-<body><div class="wrap"><header><h1 class="name">白老牛の店 いわさき</h1></header>
-<main><section><h2>炭火焼レストラン</h2><p>白老牛を扱う炭火焼レストランです。</p></section>
-<section><h2>精肉・加工品の直売</h2><p>精肉と加工品の直売所を併設しています。</p></section>
-<section><h2>所在地</h2><p>白老郡白老町字社台271-44</p></section></main>
-<footer><p>ご提案用のデモページです</p><p>制作：Mote。公式サイト・受付窓口ではありません。</p><p>企業紹介資料（tbsn235.pdf）等の公開情報に基づく構成です。最新の営業状況・サービス内容は事業者の公式案内をご確認ください。</p></footer>
-</div></body></html>
+<body>
+<div class="notice">Moteによる非公式の提案デモです。公式サイトではありません。ご予約・お申し込みは公式の窓口をご利用ください。</div>
+<div class="wrap">
+<header>
+<h1 class="name">白老牛の店 いわさき</h1>
+<p class="sub">炭火焼レストラン・精肉直売｜北海道白老郡白老町</p>
+<p class="lead">繁殖から育成・肥育までを自社牧場で一貫して手がける、白老牛の専門店です。炭火焼レストランと、精肉・加工品の直売所を同じ敷地に併設しています。</p>
+</header>
+<main>
+<section>
+<h2>炭火焼レストラン「おもてなし亭」</h2>
+<p>自社牧場で育てた白老牛を、炭火焼肉・すき焼き・しゃぶしゃぶなどで味わえるレストランです。看板のサーロインステーキをはじめ、白老牛の部位ごとの味わいを楽しめます。国道36号沿いにあり、ドライブの食事処としても立ち寄りやすい立地です。</p>
+<ul>
+<li>炭火焼肉、すき焼き、しゃぶしゃぶ、ステーキ</li>
+<li>収容人数80名</li>
+<li>天気の良い日はガーデン席も利用できます</li>
+</ul>
+</section>
+<section>
+<h2>精肉・加工品の直売</h2>
+<p>レストランに併設の直売所では、白老牛の精肉と加工品を販売しています。ご家庭用に加えて、贈答用のギフトや地方発送にも対応しています。</p>
+<ul>
+<li>白老牛の精肉・加工品の販売</li>
+<li>ギフト・地方発送に対応</li>
+</ul>
+</section>
+<section>
+<h2>白老牛と、いわさきファーム</h2>
+<p>白老牛は、白老町で育てられる北海道のブランド和牛です。いわさきは町内に自社牧場を持ち、繁殖から育成・肥育までを一貫して行う生産牧場の直営店です。白老牛の指定販売店として、レストランと直売の両方で白老牛を提供しています。</p>
+</section>
+<section>
+<h2>店舗情報</h2>
+<dl class="dl">
+<div><dt>店名</dt><dd>白老牛の店いわさき おもてなし亭</dd></div>
+<div><dt>住所</dt><dd>〒059-0901 北海道白老郡白老町社台271-44</dd></div>
+<div><dt>電話</dt><dd>0144-82-5093</dd></div>
+<div><dt>営業時間</dt><dd>11:00～20:00（ラストオーダー 19:30）<br>※木曜日のみ 11:00～16:00の時短営業</dd></div>
+<div><dt>定休日</dt><dd>水曜日（水曜日が祝日の場合は翌木曜日）</dd></div>
+<div><dt>アクセス</dt><dd>JR室蘭本線 白老駅より車で5分／国道36号沿い</dd></div>
+<div><dt>駐車場</dt><dd>あり</dd></div>
+<div><dt>お支払い</dt><dd>クレジットカード（VISA・MasterCard・JCB・AMEXほか）、QRコード決済</dd></div>
+<div><dt>姉妹店</dt><dd>白老牛の店 いわさき ご馳走亭（ハンバーグ＆ステーキ／白老町社台271-58）</dd></div>
+</dl>
+</section>
+<section>
+<h2>公式のご案内</h2>
+<p>最新の営業状況とご予約は、公式サイトとお電話でご確認ください。このデモは構成のご提案であり、予約やお問い合わせの受付は行っていません。</p>
+<p><a class="btn" href="https://omotenashi-tei.com/">公式サイトを見る</a></p>
+<p class="muted">お電話：0144-82-5093</p>
+</section>
+</main>
+<footer>
+<p>ご提案用のデモページです</p>
+<p>制作：Mote。公式サイト・受付窓口ではありません。</p>
+<p>店舗情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。最新の内容は事業者の公式案内をご確認ください。</p>
+</footer>
+</div>
+</body></html>
