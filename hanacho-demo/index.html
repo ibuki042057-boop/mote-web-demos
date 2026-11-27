@@ -1,40 +1,158 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>有限会社花長生花店｜ご提案用デモ</title><style>
-:root{--ink:#262626;--paper:#ffffff;--panel:#f5f5f5;--line:#d6d6d6;--muted:#595959}
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>花長生花店｜苫小牧のフラワーショップ｜ご提案用デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3a2028;--paper:#fdf6f8;--panel:#f5e8ec;--line:#e0cdd2;--muted:#8a6672;--accent:#a84057;--dark:#261418}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.85;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.9;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
+img{display:block;max-width:100%}
 a{color:inherit}
-.notice{background:var(--panel);padding:10px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:32px 0 24px;border-bottom:1px solid var(--line)}
-header .name{font-size:22px;font-weight:700;letter-spacing:.02em}
-header .sub{font-size:13px;color:var(--muted);margin-top:8px}
-main{padding:8px 0 24px}
-section{padding:28px 0;border-bottom:1px solid var(--line)}
-section:last-of-type{border-bottom:0}
-h2{font-size:19px;font-weight:700;line-height:1.5;margin:0 0 14px}
-h3{font-size:16px;font-weight:700;margin:0 0 6px}
-p{margin:0 0 14px;font-size:16px}
-.muted{color:var(--muted);font-size:13px}
-ul{margin:0 0 14px;padding-left:1.2em}
-li{margin:4px 0;font-size:16px}
+.notice{background:var(--dark);color:#d6bfc6;padding:9px 20px;font-size:12.5px;text-align:center;letter-spacing:.04em}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(253,246,248,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar .shop{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;letter-spacing:.08em}
+.topbar .tel{font-size:14px;text-decoration:none;border:1px solid var(--ink);padding:5px 14px;border-radius:999px;white-space:nowrap}
+.hero{position:relative;background:var(--dark);min-height:88svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(26,12,16,.78) 0%,rgba(26,12,16,.28) 45%,rgba(26,12,16,.12) 100%)}
+.hero-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:56px 24px 64px;width:100%}
+.hero .en{letter-spacing:.42em;font-size:12px;font-weight:500;margin:0 0 18px;text-transform:uppercase}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(34px,6.5vw,62px);font-weight:900;line-height:1.25;margin:0 0 16px;letter-spacing:.04em}
+.hero .lead{font-size:clamp(15px,2.4vw,18px);max-width:34em;margin:0;line-height:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.en-label{letter-spacing:.38em;font-size:11.5px;color:var(--accent);font-weight:700;text-transform:uppercase;margin:0 0 14px}
+h2{font-family:"Noto Serif JP",serif;font-size:clamp(26px,4.4vw,38px);font-weight:700;line-height:1.5;margin:0 0 22px;letter-spacing:.03em}
+.lead-p{font-size:16.5px;max-width:40em;margin:0 0 18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/3}
+.band{background:var(--panel)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.feature{border-top:2px solid var(--ink);padding-top:18px;transition:transform .3s ease}
+.feature:hover{transform:translateY(-3px)}
+.feature .fen{letter-spacing:.3em;font-size:11px;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+.feature h3{font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 8px}
+.feature p{font-size:14.5px;margin:0;color:#5a3842}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.product{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 18px;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+.product:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(58,32,40,.10)}
+.product .pen{letter-spacing:.26em;font-size:10.5px;color:var(--muted);text-transform:uppercase;margin:0 0 6px}
+.product h3{font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 6px}
+.product p{font-size:13px;margin:0;color:#5a3842}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
 .dl{margin:0}
-.dl div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-.dl div:last-child{border-bottom:0}
-.dl dt{flex:0 0 7.5em;color:var(--muted);margin:0}
+.dl div{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.dl dt{flex:0 0 6.5em;color:var(--muted);margin:0}
 .dl dd{margin:0}
-.notes{list-style:none;padding:0;margin:0}
-.notes li{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 14px;margin:0 0 10px}
-footer{padding:24px 0 48px;font-size:13px;color:var(--muted);line-height:1.8}
-a:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-@media(max-width:600px){.dl div{display:block}.dl dt{margin-bottom:2px}}
-
-h1.name{margin:0;line-height:1.5}body{overflow-wrap:anywhere}footer p{font-size:13px;margin:0 0 6px}
+.big-tel{font-family:"Noto Serif JP",serif;font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:.04em;margin:6px 0 4px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 30px;font-size:15px;text-decoration:none;border-radius:999px;margin-top:14px;letter-spacing:.06em;transition:opacity .3s ease}
+.btn:hover{opacity:.8}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+footer{background:var(--dark);color:#c0a4ac;padding:44px 0 56px;font-size:13px;line-height:1.9}
+footer .wrap p{margin:0 0 6px}
+footer .fname{font-family:"Noto Serif JP",serif;color:#e8d4da;font-size:16px;letter-spacing:.08em;margin-bottom:12px}
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:760px){
+ .split,.info-grid{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr}
+ .products{grid-template-columns:repeat(2,1fr)}
+ section{padding:60px 0}
+ .hero{min-height:76svh}
+}
 </style></head>
-<body><div class="wrap"><header><h1 class="name">有限会社花長生花店</h1></header>
-<main><section><h2>駅前中央通り商店街の花店</h2><p>苫小牧の駅前中央通り商店街にあるフラワーショップです。</p></section>
-<section><h2>取り扱い商品</h2><p>生花、鉢花、観葉植物、プリザーブドフラワーなどを取り扱っています。</p></section>
-<section><h2>花の装飾・デザイン</h2><p>企業紹介資料では、フラワー装飾1級技能士とNFD一級デザイナーの在籍が紹介されています。</p></section>
-<section><h2>所在地</h2><p>苫小牧市表町1-3-1</p></section></main>
-<footer><p>ご提案用のデモページです</p><p>制作：Mote。公式サイト・受付窓口ではありません。</p><p>企業紹介資料（tbsn32.pdf）等の公開情報に基づく構成です。最新の営業状況・サービス内容は事業者の公式案内をご確認ください。</p></footer>
-</div></body></html>
+<body>
+<div class="notice">Moteによる非公式の提案デモです。公式サイトではありません。ご注文・お問い合わせはお店へ直接ご連絡ください。</div>
+<div class="topbar"><div class="topbar-in"><span class="shop">花長生花店</span><a class="tel" href="tel:0144330101">お問い合わせ 0144-33-0101</a></div></div>
+
+<div class="hero">
+<img class="bg" src="img/hero.jpg" alt="色とりどりの花が並ぶフラワーショップ">
+<div class="hero-in">
+<p class="en">Hanacho Flower Shop</p>
+<h1>花長生花店</h1>
+<p class="lead">苫小牧で花のある暮らしをお届けするフラワーショップです。生花・プリザーブドフラワー・アレンジメントから、慶弔・ブライダルの装花まで、さまざまなシーンに花を添えます。</p>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">About</p>
+<h2 class="fade-in">言葉にならない気持ちを、<br>花に託して。</h2>
+<div class="split">
+<div class="fade-in">
+<p class="lead-p">花長生花店は、苫小牧市で生花・プリザーブドフラワー・アレンジメントなどを取り扱うフラワーショップです。花キューピット加盟店として、全国への配達にも対応しています。</p>
+<p class="lead-p">フラワー装飾1級技能士・NFD一級デザイナーが在籍し、お祝いの花束から葬儀用の花まで、用途に合わせたご提案をいたします。</p>
+</div>
+<img class="fade-in" src="img/a.jpg" alt="美しいフラワーアレンジメント">
+</div>
+<div class="features">
+<div class="feature fade-in"><p class="fen">Bouquet</p><h3>花束・アレンジメント</h3><p>誕生日・記念日・発表会など、さまざまなシーンに合わせた花束やアレンジメントをお作りします。</p></div>
+<div class="feature fade-in"><p class="fen">Funeral</p><h3>葬儀・法要のお花</h3><p>苫小牧市内の斎場への配達に対応。故人を偲ぶ花をお届けします。</p></div>
+<div class="feature fade-in"><p class="fen">Skill</p><h3>有資格のデザイナー</h3><p>フラワー装飾1級技能士・NFD一級デザイナーが在籍。確かな技術でお花をお仕立てします。</p></div>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
+<p class="en-label fade-in">Products</p>
+<h2 class="fade-in">取り扱い商品</h2>
+<div class="split">
+<img class="fade-in" src="img/b.jpg" alt="花のある暮らしのイメージイラスト">
+<div class="fade-in">
+<p class="lead-p">生花の花束やアレンジメントのほか、枯れないプリザーブドフラワー、華やかなバルーンアレンジ、出産祝いに人気のダイパーケーキなど、多彩な商品をご用意しています。</p>
+<p class="lead-p">オンラインショップでもご注文を承っています。</p>
+</div>
+</div>
+<div class="products">
+<div class="product fade-in"><p class="pen">Fresh</p><h3>生花</h3><p>花束・アレンジメントをご予算に合わせて</p></div>
+<div class="product fade-in"><p class="pen">Preserved</p><h3>プリザーブドフラワー</h3><p>枯れない花のギフト、長く楽しめます</p></div>
+<div class="product fade-in"><p class="pen">Balloon</p><h3>バルーンアレンジ</h3><p>花とバルーンを組み合わせた華やかな贈り物</p></div>
+<div class="product fade-in"><p class="pen">Gift</p><h3>ダイパーケーキ</h3><p>おむつとプリザーブドフラワーの出産祝い</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">Information</p>
+<h2 class="fade-in">店舗情報・お問い合わせ</h2>
+<div class="info-grid">
+<dl class="dl fade-in">
+<div><dt>店名</dt><dd>有限会社 花長生花店</dd></div>
+<div><dt>所在地</dt><dd>苫小牧市表町1-3-1</dd></div>
+<div><dt>営業時間</dt><dd>9:00〜18:00（月〜金）／9:00〜17:00（土）／9:00〜15:00（日祝）</dd></div>
+<div><dt>定休日</dt><dd>正月5日間、8月15日〜18日</dd></div>
+<div><dt>加盟</dt><dd>花キューピット加盟店</dd></div>
+</dl>
+<div class="fade-in">
+<p class="en-label" style="margin-bottom:6px">Contact</p>
+<p style="margin:0;font-size:14.5px">ご注文・ご相談はお電話で</p>
+<p class="big-tel">0144-33-0101</p>
+<p style="margin:0;font-size:13.5px;color:var(--muted)">最新の情報は公式サイトをご確認ください。</p>
+<a class="btn" href="https://hanacho-flower.jp/">公式サイトを見る</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<p class="fname">花長生花店｜ご提案用デモ</p>
+<p>制作：Mote。本ページは提案用のデモで、公式サイト・受付窓口ではありません。</p>
+<p>写真・イラストはイメージです（実際の店舗・商品の写真ではありません）。店舗情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var els=document.querySelectorAll('.fade-in');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(e){io.observe(e)});
+});
+</script>
+</body></html>
