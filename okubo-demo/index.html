@@ -1,40 +1,157 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>株式会社大久保測量｜ご提案用デモ</title><style>
-:root{--ink:#262626;--paper:#ffffff;--panel:#f5f5f5;--line:#d6d6d6;--muted:#595959}
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>株式会社大久保測量｜苫小牧の測量会社｜ご提案用デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1e2d3d;--paper:#f4f7f9;--panel:#e4ecf2;--line:#c4d2de;--muted:#5a7088;--accent:#3b6f9f;--dark:#111c28}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.85;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.9;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
+img{display:block;max-width:100%}
 a{color:inherit}
-.notice{background:var(--panel);padding:10px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:32px 0 24px;border-bottom:1px solid var(--line)}
-header .name{font-size:22px;font-weight:700;letter-spacing:.02em}
-header .sub{font-size:13px;color:var(--muted);margin-top:8px}
-main{padding:8px 0 24px}
-section{padding:28px 0;border-bottom:1px solid var(--line)}
-section:last-of-type{border-bottom:0}
-h2{font-size:19px;font-weight:700;line-height:1.5;margin:0 0 14px}
-h3{font-size:16px;font-weight:700;margin:0 0 6px}
-p{margin:0 0 14px;font-size:16px}
-.muted{color:var(--muted);font-size:13px}
-ul{margin:0 0 14px;padding-left:1.2em}
-li{margin:4px 0;font-size:16px}
+.notice{background:var(--dark);color:#a4b8cc;padding:9px 20px;font-size:12.5px;text-align:center;letter-spacing:.04em}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(244,247,249,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar .shop{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;letter-spacing:.08em}
+.topbar .tel{font-size:14px;text-decoration:none;border:1px solid var(--ink);padding:5px 14px;border-radius:999px;white-space:nowrap}
+.hero{position:relative;background:var(--dark);min-height:88svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,22,.78) 0%,rgba(8,14,22,.30) 45%,rgba(8,14,22,.12) 100%)}
+.hero-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:56px 24px 64px;width:100%}
+.hero .en{letter-spacing:.42em;font-size:12px;font-weight:500;margin:0 0 18px;text-transform:uppercase}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(34px,6.5vw,62px);font-weight:900;line-height:1.25;margin:0 0 16px;letter-spacing:.04em}
+.hero .lead{font-size:clamp(15px,2.4vw,18px);max-width:34em;margin:0;line-height:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.en-label{letter-spacing:.38em;font-size:11.5px;color:var(--accent);font-weight:700;text-transform:uppercase;margin:0 0 14px}
+h2{font-family:"Noto Serif JP",serif;font-size:clamp(26px,4.4vw,38px);font-weight:700;line-height:1.5;margin:0 0 22px;letter-spacing:.03em}
+.lead-p{font-size:16.5px;max-width:40em;margin:0 0 18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/3}
+.band{background:var(--panel)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.feature{border-top:2px solid var(--ink);padding-top:18px;transition:transform .3s ease}
+.feature:hover{transform:translateY(-3px)}
+.feature .fen{letter-spacing:.3em;font-size:11px;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+.feature h3{font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 8px}
+.feature p{font-size:14.5px;margin:0;color:#3a5068}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.service{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 18px;text-align:center;transition:transform .3s ease,box-shadow .3s ease}
+.service:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(30,45,61,.10)}
+.service .sen{letter-spacing:.26em;font-size:10.5px;color:var(--muted);text-transform:uppercase;margin:0 0 6px}
+.service h3{font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 6px}
+.service p{font-size:13px;margin:0;color:#3a5068}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
 .dl{margin:0}
-.dl div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-.dl div:last-child{border-bottom:0}
-.dl dt{flex:0 0 7.5em;color:var(--muted);margin:0}
+.dl div{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.dl dt{flex:0 0 6.5em;color:var(--muted);margin:0}
 .dl dd{margin:0}
-.notes{list-style:none;padding:0;margin:0}
-.notes li{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 14px;margin:0 0 10px}
-footer{padding:24px 0 48px;font-size:13px;color:var(--muted);line-height:1.8}
-a:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-@media(max-width:600px){.dl div{display:block}.dl dt{margin-bottom:2px}}
-
-h1.name{margin:0;line-height:1.5}body{overflow-wrap:anywhere}footer p{font-size:13px;margin:0 0 6px}
+.big-tel{font-family:"Noto Serif JP",serif;font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:.04em;margin:6px 0 4px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 30px;font-size:15px;text-decoration:none;border-radius:999px;margin-top:14px;letter-spacing:.06em;transition:opacity .3s ease}
+.btn:hover{opacity:.8}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+footer{background:var(--dark);color:#90a6bc;padding:44px 0 56px;font-size:13px;line-height:1.9}
+footer .wrap p{margin:0 0 6px}
+footer .fname{font-family:"Noto Serif JP",serif;color:#c4d6e6;font-size:16px;letter-spacing:.08em;margin-bottom:12px}
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:760px){
+ .split,.info-grid{grid-template-columns:1fr}
+ .features,.services{grid-template-columns:1fr}
+ section{padding:60px 0}
+ .hero{min-height:76svh}
+}
 </style></head>
-<body><div class="wrap"><header><h1 class="name">株式会社大久保測量</h1></header>
-<main><section><h2>測量業務</h2><p>公共測量、一般測量、GPS測量、土地境界確定を手がけています。</p></section>
-<section><h2>家屋調査・図面作成</h2><p>家屋調査と図面の作成・出力を取り扱っています。</p></section>
-<section><h2>昭和50年開設</h2><p>昭和50年に開設した測量会社です。</p></section>
-<section><h2>所在地</h2><p>苫小牧市永福町1-4-16</p></section></main>
-<footer><p>ご提案用のデモページです</p><p>制作：Mote。公式サイト・受付窓口ではありません。</p><p>企業紹介資料（tbsn17.pdf）等の公開情報に基づく構成です。最新の営業状況・サービス内容は事業者の公式案内をご確認ください。</p></footer>
-</div></body></html>
+<body>
+<div class="notice">Moteによる非公式の提案デモです。公式サイトではありません。測量のご相談・お問い合わせは会社へ直接ご連絡ください。</div>
+<div class="topbar"><div class="topbar-in"><span class="shop">大久保測量</span><a class="tel" href="tel:0144748815">お問い合わせ 0144-74-8815</a></div></div>
+
+<div class="hero">
+<img class="bg" src="img/hero.jpg" alt="広大な北海道の原野で測量を行う技術者">
+<div class="hero-in">
+<p class="en">OHKUBO Survey — Since 1975</p>
+<h1>大久保測量</h1>
+<p class="lead">1975年創立。苫小牧を拠点に、GNSS測量からドローン空撮まで、公共測量・民間測量の幅広い業務に対応する測量の専門会社です。</p>
+</div>
+</div>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">Service</p>
+<h2 class="fade-in">測る技術で、<br>まちをつくる。</h2>
+<div class="split">
+<div class="fade-in">
+<p class="lead-p">株式会社大久保測量は、1975年に苫小牧で創立した測量の専門会社です。北海道開発局・北海道・苫小牧市をはじめとする公共機関から、土木・建築・不動産の民間企業まで、幅広い取引先への測量業務を手がけています。</p>
+<p class="lead-p">GNSS衛星を使った精密測量やドローンによる空撮など、先進的な技術も積極的に導入。半世紀にわたって地域のインフラ整備を支えています。</p>
+</div>
+<img class="fade-in" src="img/a.jpg" alt="GNSS測量機器を使った測量作業">
+</div>
+<div class="features">
+<div class="feature fade-in"><p class="fen">GNSS</p><h3>GNSS測量</h3><p>衛星測位システムを使った基準点測量・地形測量。高精度なRTK-GNSS測量にも対応しています。</p></div>
+<div class="feature fade-in"><p class="fen">Survey</p><h3>測量・設計業務</h3><p>用地測量、路線測量、河川測量、工事測量、施工管理など、土木・建築に関わる測量全般を行います。</p></div>
+<div class="feature fade-in"><p class="fen">Drone</p><h3>ドローン空撮</h3><p>ドローンによる空撮で、広域の地形把握や施工前後の記録を効率的に行います。</p></div>
+</div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap">
+<p class="en-label fade-in">Detail</p>
+<h2 class="fade-in">業務の詳細</h2>
+<div class="split">
+<img class="fade-in" src="img/b.jpg" alt="測量業務の概要を示すイラスト">
+<div class="fade-in">
+<p class="lead-p">公共測量では、北海道開発局や北海道、苫小牧市など官公庁の事業に携わっています。民間では、土木・建築・不動産会社からの依頼に対応。道路工事完成図面の作成や各種台帳の整備、CAD図面作成なども行います。</p>
+<p class="lead-p">2026年7月には、胆振総合振興局より鳥インフルエンザ防疫対応への貢献で感謝状を授与されています。</p>
+</div>
+</div>
+<div class="services">
+<div class="service fade-in"><p class="sen">Control</p><h3>基準点測量</h3><p>GNSS・光波による高精度な基準点の設置</p></div>
+<div class="service fade-in"><p class="sen">Land</p><h3>用地・一筆測量</h3><p>土地境界の確定と面積の計測</p></div>
+<div class="service fade-in"><p class="sen">Civil</p><h3>工事測量・施工管理</h3><p>丁張・数量算出・工事完成図面の作成</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="en-label fade-in">Information</p>
+<h2 class="fade-in">会社情報・お問い合わせ</h2>
+<div class="info-grid">
+<dl class="dl fade-in">
+<div><dt>社名</dt><dd>株式会社大久保測量</dd></div>
+<div><dt>所在地</dt><dd>〒053-0815 北海道苫小牧市永福町1丁目4-16</dd></div>
+<div><dt>設立</dt><dd>1975年（昭和50年）12月</dd></div>
+<div><dt>事業内容</dt><dd>GNSS測量、測量・設計業務、ドローン空撮</dd></div>
+<div><dt>主要取引先</dt><dd>北海道開発局、北海道、苫小牧市ほか</dd></div>
+<div><dt>FAX</dt><dd>0144-74-8838</dd></div>
+</dl>
+<div class="fade-in">
+<p class="en-label" style="margin-bottom:6px">Contact</p>
+<p style="margin:0;font-size:14.5px">測量のご相談・お問い合わせはお電話で</p>
+<p class="big-tel">0144-74-8815</p>
+<p style="margin:0;font-size:13.5px;color:var(--muted)">最新の情報は公式サイトをご確認ください。</p>
+<a class="btn" href="https://okubo-corp.com/">公式サイトを見る</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<p class="fname">株式会社大久保測量｜ご提案用デモ</p>
+<p>制作：Mote。本ページは提案用のデモで、公式サイト・受付窓口ではありません。</p>
+<p>写真・イラストはイメージです（実際の店舗・商品の写真ではありません）。会社情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var els=document.querySelectorAll('.fade-in');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('visible')});return}
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(e){io.observe(e)});
+});
+</script>
+</body></html>
