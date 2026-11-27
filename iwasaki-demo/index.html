@@ -1,74 +1,139 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>白老牛の店 いわさき｜ご提案用デモ</title><style>
-:root{--ink:#262626;--paper:#ffffff;--panel:#f5f5f5;--line:#d6d6d6;--muted:#595959}
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>白老牛の店 いわさき｜ご提案用デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a2320;--paper:#faf7f1;--panel:#f1eadd;--line:#ddd2c2;--muted:#7a6f63;--accent:#8c2f26;--dark:#1d1713}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;line-height:1.85;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.9;-webkit-text-size-adjust:100%;overflow-wrap:anywhere}
+img{display:block;max-width:100%}
 a{color:inherit}
-.notice{background:var(--panel);padding:10px 20px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{padding:36px 0 28px;border-bottom:1px solid var(--line)}
-header .name{font-size:24px;font-weight:700;letter-spacing:.02em;margin:0;line-height:1.5}
-header .sub{font-size:14px;color:var(--muted);margin-top:8px}
-header .lead{font-size:16px;margin:18px 0 0}
-main{padding:8px 0 24px}
-section{padding:28px 0;border-bottom:1px solid var(--line)}
-section:last-of-type{border-bottom:0}
-h2{font-size:19px;font-weight:700;line-height:1.5;margin:0 0 14px}
-h3{font-size:16px;font-weight:700;margin:0 0 6px}
-p{margin:0 0 14px;font-size:16px}
-.muted{color:var(--muted);font-size:13px}
-ul{margin:0 0 14px;padding-left:1.2em}
-li{margin:4px 0;font-size:16px}
+.serif{font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif}
+.notice{background:var(--dark);color:#e9e2d6;padding:9px 20px;font-size:12.5px;text-align:center;letter-spacing:.04em}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(250,247,241,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.topbar-in{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topbar .shop{font-family:"Noto Serif JP",serif;font-weight:700;font-size:17px;letter-spacing:.08em}
+.topbar .tel{font-size:14px;text-decoration:none;border:1px solid var(--ink);padding:5px 14px;border-radius:999px;white-space:nowrap}
+.hero{position:relative;min-height:88svh;display:flex;align-items:flex-end;color:#fff}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,10,7,.78) 0%,rgba(15,10,7,.25) 45%,rgba(15,10,7,.15) 100%)}
+.hero-in{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:56px 24px 64px;width:100%}
+.hero .en{letter-spacing:.42em;font-size:12px;font-weight:500;margin:0 0 18px;text-transform:uppercase}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:clamp(38px,7.2vw,68px);font-weight:900;line-height:1.25;margin:0 0 16px;letter-spacing:.04em}
+.hero .lead{font-size:clamp(15px,2.4vw,18px);max-width:34em;margin:0;line-height:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.en-label{letter-spacing:.38em;font-size:11.5px;color:var(--accent);font-weight:700;text-transform:uppercase;margin:0 0 14px}
+h2{font-family:"Noto Serif JP",serif;font-size:clamp(26px,4.4vw,38px);font-weight:700;line-height:1.5;margin:0 0 22px;letter-spacing:.03em}
+.lead-p{font-size:16.5px;max-width:40em;margin:0 0 18px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split img{width:100%;height:100%;object-fit:cover;border-radius:4px;aspect-ratio:4/3}
+.band{background:var(--panel)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.feature{border-top:2px solid var(--ink);padding-top:18px}
+.feature .fen{letter-spacing:.3em;font-size:11px;color:var(--muted);text-transform:uppercase;margin:0 0 8px}
+.feature h3{font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 8px}
+.feature p{font-size:14.5px;margin:0;color:#453c34}
+.tastes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+.taste{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 18px;text-align:center}
+.taste .ten{letter-spacing:.26em;font-size:10.5px;color:var(--muted);text-transform:uppercase;margin:0 0 6px}
+.taste h3{font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 6px}
+.taste p{font-size:13px;margin:0;color:#453c34}
+.info-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
 .dl{margin:0}
-.dl div{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
-.dl div:last-child{border-bottom:0}
-.dl dt{flex:0 0 7.5em;color:var(--muted);margin:0}
+.dl div{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.dl dt{flex:0 0 6.5em;color:var(--muted);margin:0}
 .dl dd{margin:0}
-.btn{display:inline-block;border:1px solid var(--ink);padding:10px 22px;font-size:15px;text-decoration:none;margin-top:4px}
-.notes{list-style:none;padding:0;margin:0}
-.notes li{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding:4px 0 4px 14px;margin:0 0 10px}
-footer{padding:24px 0 48px;font-size:13px;color:var(--muted);line-height:1.8}
-footer p{font-size:13px;margin:0 0 6px}
-a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-@media(max-width:600px){.dl div{display:block}.dl dt{margin-bottom:2px}}
-body{overflow-wrap:anywhere}
+.big-tel{font-family:"Noto Serif JP",serif;font-size:clamp(28px,5vw,40px);font-weight:700;letter-spacing:.04em;margin:6px 0 4px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 30px;font-size:15px;text-decoration:none;border-radius:999px;margin-top:14px;letter-spacing:.06em}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+footer{background:var(--dark);color:#cfc6b8;padding:44px 0 56px;font-size:13px;line-height:1.9}
+footer .wrap p{margin:0 0 6px}
+footer .fname{font-family:"Noto Serif JP",serif;color:#f0e9dd;font-size:16px;letter-spacing:.08em;margin-bottom:12px}
+@media(max-width:760px){
+ .split,.info-grid{grid-template-columns:1fr}
+ .features{grid-template-columns:1fr}
+ .tastes{grid-template-columns:repeat(2,1fr)}
+ section{padding:60px 0}
+ .hero{min-height:76svh}
+}
 </style></head>
 <body>
 <div class="notice">Moteによる非公式の提案デモです。公式サイトではありません。ご予約・お申し込みは公式の窓口をご利用ください。</div>
+<div class="topbar"><div class="topbar-in"><span class="shop">白老牛の店 いわさき</span><a class="tel" href="tel:0144825093">ご予約 0144-82-5093</a></div></div>
+
+<div class="hero">
+<img class="bg" src="img/hero.jpg" alt="炭火で焼かれる白老牛">
+<div class="hero-in">
+<p class="en">Shiraoi Wagyu — Iwasaki Farm</p>
+<h1>白老牛の店<br>いわさき</h1>
+<p class="lead">繁殖から育成・肥育まで、自社牧場で一貫して育てた白老牛を、炭火焼レストランと精肉直売でお届けする専門店です。</p>
+</div>
+</div>
+
+<section>
 <div class="wrap">
-<header>
-<h1 class="name">白老牛の店 いわさき</h1>
-<p class="sub">炭火焼レストラン・精肉直売｜北海道白老郡白老町</p>
-<p class="lead">繁殖から育成・肥育までを自社牧場で一貫して手がける、白老牛の専門店です。炭火焼レストランと、精肉・加工品の直売所を同じ敷地に併設しています。</p>
-</header>
-<main>
-<section>
-<h2>炭火焼レストラン「おもてなし亭」</h2>
-<p>自社牧場で育てた白老牛を、炭火焼肉・すき焼き・しゃぶしゃぶなどで味わえるレストランです。看板のサーロインステーキをはじめ、白老牛の部位ごとの味わいを楽しめます。国道36号沿いにあり、ドライブの食事処としても立ち寄りやすい立地です。</p>
-<ul>
-<li>炭火焼肉、すき焼き、しゃぶしゃぶ、ステーキ</li>
-<li>収容人数80名</li>
-<li>天気の良い日はガーデン席も利用できます</li>
-</ul>
+<p class="en-label">About</p>
+<h2>牧場直営だから、<br>届けられる味があります。</h2>
+<div class="split">
+<div>
+<p class="lead-p">白老牛は、北海道白老町で育てられるブランド和牛です。いわさきは町内に自社牧場を持ち、繁殖から育成・肥育までを一貫して手がけています。</p>
+<p class="lead-p">育てる現場と、提供する現場がひとつながり。白老牛の指定販売店として、レストラン「おもてなし亭」と精肉・加工品の直売所で、自社生産の白老牛をお届けします。</p>
+</div>
+<img src="img/pasture.jpg" alt="牧場で草を食む黒毛和牛">
+</div>
+<div class="features">
+<div class="feature"><p class="fen">Charcoal Grill</p><h3>炭火焼レストラン</h3><p>炭火焼肉・すき焼き・しゃぶしゃぶを味わえるレストラン「おもてなし亭」。収容人数80名、国道36号沿いの立地です。</p></div>
+<div class="feature"><p class="fen">Butcher &amp; Deli</p><h3>精肉・加工品の直売</h3><p>併設の直売所では白老牛の精肉と加工品を販売。ご家庭用から贈答用まで対応します。</p></div>
+<div class="feature"><p class="fen">Gift &amp; Delivery</p><h3>ギフト・地方発送</h3><p>遠方の方へも白老牛を。ギフトや地方発送にも対応しています。</p></div>
+</div>
+</div>
 </section>
-<section>
-<h2>精肉・加工品の直売</h2>
-<p>レストランに併設の直売所では、白老牛の精肉と加工品を販売しています。ご家庭用に加えて、贈答用のギフトや地方発送にも対応しています。</p>
-<ul>
-<li>白老牛の精肉・加工品の販売</li>
-<li>ギフト・地方発送に対応</li>
-</ul>
+
+<section class="band">
+<div class="wrap">
+<p class="en-label">Restaurant</p>
+<h2>炭火焼レストラン<br>「おもてなし亭」</h2>
+<div class="split">
+<img src="img/sukiyaki.jpg" alt="白老牛のすき焼き">
+<div>
+<p class="lead-p">看板は、脂の甘みと柔らかさが際立つサーロインステーキ。炭火で焼く焼肉、鍋を囲むすき焼き・しゃぶしゃぶまで、白老牛の部位ごとの味わいを楽しめます。</p>
+<p class="lead-p">天気の良い日はガーデン席も利用可能。白老駅から車で5分、ドライブの食事処としても立ち寄りやすい一軒です。</p>
+</div>
+</div>
+<div class="tastes">
+<div class="taste"><p class="ten">Charcoal</p><h3>炭火焼肉</h3><p>炭火で香ばしく焼き上げる、牧場直営の焼肉</p></div>
+<div class="taste"><p class="ten">Sukiyaki</p><h3>すき焼き</h3><p>割り下とともに味わう、白老牛の甘み</p></div>
+<div class="taste"><p class="ten">Shabu-Shabu</p><h3>しゃぶしゃぶ</h3><p>薄切り肉を出汁にくぐらせて、さっぱりと</p></div>
+<div class="taste"><p class="ten">Steak</p><h3>ステーキ</h3><p>看板のサーロインステーキ</p></div>
+</div>
+</div>
 </section>
+
 <section>
-<h2>白老牛と、いわさきファーム</h2>
-<p>白老牛は、白老町で育てられる北海道のブランド和牛です。いわさきは町内に自社牧場を持ち、繁殖から育成・肥育までを一貫して行う生産牧場の直営店です。白老牛の指定販売店として、レストランと直売の両方で白老牛を提供しています。</p>
+<div class="wrap">
+<p class="en-label">Butcher</p>
+<h2>精肉・加工品の直売所</h2>
+<div class="split">
+<div>
+<p class="lead-p">レストランに併設の直売所では、白老牛の精肉と加工品を販売しています。自宅での焼肉やすき焼き用に、また贈答用のギフトにも。</p>
+<p class="lead-p">地方発送にも対応しているので、道外の方への贈り物にもご利用いただけます。</p>
+<p><a class="btn ghost" href="https://omotenashi-tei.com/">公式サイトで最新の案内を見る</a></p>
+</div>
+<img src="img/beef.jpg" alt="霜降りの白老牛ステーキ肉">
+</div>
+</div>
 </section>
-<section>
-<h2>店舗情報</h2>
+
+<section class="band">
+<div class="wrap">
+<p class="en-label">Information</p>
+<h2>店舗情報・ご予約</h2>
+<div class="info-grid">
 <dl class="dl">
 <div><dt>店名</dt><dd>白老牛の店いわさき おもてなし亭</dd></div>
 <div><dt>住所</dt><dd>〒059-0901 北海道白老郡白老町社台271-44</dd></div>
-<div><dt>電話</dt><dd>0144-82-5093</dd></div>
 <div><dt>営業時間</dt><dd>11:00～20:00（ラストオーダー 19:30）<br>※木曜日のみ 11:00～16:00の時短営業</dd></div>
 <div><dt>定休日</dt><dd>水曜日（水曜日が祝日の場合は翌木曜日）</dd></div>
 <div><dt>アクセス</dt><dd>JR室蘭本線 白老駅より車で5分／国道36号沿い</dd></div>
@@ -76,18 +141,22 @@ body{overflow-wrap:anywhere}
 <div><dt>お支払い</dt><dd>クレジットカード（VISA・MasterCard・JCB・AMEXほか）、QRコード決済</dd></div>
 <div><dt>姉妹店</dt><dd>白老牛の店 いわさき ご馳走亭（ハンバーグ＆ステーキ／白老町社台271-58）</dd></div>
 </dl>
-</section>
-<section>
-<h2>公式のご案内</h2>
-<p>最新の営業状況とご予約は、公式サイトとお電話でご確認ください。このデモは構成のご提案であり、予約やお問い合わせの受付は行っていません。</p>
-<p><a class="btn" href="https://omotenashi-tei.com/">公式サイトを見る</a></p>
-<p class="muted">お電話：0144-82-5093</p>
-</section>
-</main>
-<footer>
-<p>ご提案用のデモページです</p>
-<p>制作：Mote。公式サイト・受付窓口ではありません。</p>
-<p>店舗情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。最新の内容は事業者の公式案内をご確認ください。</p>
-</footer>
+<div>
+<p class="en-label" style="margin-bottom:6px">Reservation</p>
+<p style="margin:0;font-size:14.5px">ご予約・お問い合わせはお電話で</p>
+<p class="big-tel">0144-82-5093</p>
+<p style="margin:0;font-size:13.5px;color:var(--muted)">最新の営業状況は公式サイトをご確認ください。</p>
+<a class="btn" href="https://omotenashi-tei.com/">公式サイトを見る</a>
 </div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<p class="fname">白老牛の店 いわさき｜ご提案用デモ</p>
+<p>制作：Mote。本ページは提案用のデモで、公式サイト・受付窓口ではありません。</p>
+<p>写真はイメージです（実際の店舗・商品の写真ではありません）。店舗情報は公式サイト等の公開情報に基づきます（2026年11月27日確認）。</p>
+</div>
+</footer>
 </body></html>
